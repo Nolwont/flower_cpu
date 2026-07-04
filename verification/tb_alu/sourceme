@@ -1,0 +1,2 @@
+export TB_HOME="$(pwd)"
+export DESIGN="$TB_HOME/../../design"
