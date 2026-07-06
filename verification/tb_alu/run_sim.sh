@@ -1,1 +1,1 @@
-verilator --binary -j 0 -Wall --top-module tb_alu +incdir+$UVM_HOME +define+UVM_NO_DPI +incdir+$(pwd) $UVM_HOME/uvm_pkg.sv -f filelist.f && ./obj_dir/Vtb_alu
+verilator --binary -j 0 -Wall --trace --top-module tb_alu +incdir+$UVM_HOME +define+UVM_NO_DPI +incdir+$(pwd) $UVM_HOME/uvm_pkg.sv -f filelist.f && ./obj_dir/Vtb_alu
