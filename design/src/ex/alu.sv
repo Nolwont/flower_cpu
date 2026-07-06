@@ -5,7 +5,7 @@ module alu (
     output wire [31:0] out
     );
 
-    import typedefs_pkg::*;
+    import design_pkg::*;
 
     assign out = opcode == ADD ?
             in_a + in_b :
