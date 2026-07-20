@@ -1,15 +1,15 @@
 This document contains specifications for the execution stage.
 
 Inputs:
-  inst [31:0]
-  rs1 [31:0]
-  rs2 [31:0]
+  inst_ex_in [31:0]
+  rs1_ex_in [31:0]
+  rs2_ex_in [31:0]
 
 Outpus:
-  inst [31:0]
-  rs1_pass [31:0]
-  rs2_pass [31:0]
-  res [31:0]
+  inst_ex_out [31:0]
+  rs1_pass_ex_out [31:0]
+  rs2_pass_ex_out [31:0]
+  res_ex_out [31:0]
 
 The instruction, rs1 and rs2 is always passed to the next pipeline stage.
 

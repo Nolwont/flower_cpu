@@ -1,0 +1,3 @@
+source $OSS_HOME/environment
+export TB_HOME="$(pwd)"
+export DESIGN="$TB_HOME/../../design"

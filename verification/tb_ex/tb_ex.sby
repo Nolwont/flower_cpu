@@ -1,0 +1,18 @@
+[options]
+mode bmc
+
+[engines]
+smtbmc
+
+[script]
+read_verilog -sv design_pkg.sv
+read_verilog -sv alu.sv
+read_verilog -sv ex.sv
+read_verilog -sv tb_ex.sv
+prep -top tb_ex
+
+[files]
+$DESIGN/src/design_pkg.sv
+$DESIGN/src/ex/alu.sv
+$DESIGN/src/ex/ex.sv
+tb_ex.sv
