@@ -1,0 +1,44 @@
+This document contains definitions of all operations in the flowerISA.
+
+All instructions are 32 bits long.
+All numbers are 32 bits signed 2's compliment.
+Memory is byte addressed.
+Assumes separate instruction and data memories both accessable using 32 bits.
+
+Specific purpuse registers:
+  r0: Always equal to 0.
+  r1: program counter.
+
+Instructions are divided into TODO categories (using little endian):
+  AR-type: (destination register [31:28], source register 1 [27:24], source register 2 [23:20], UNUSED [19:8], OP code [7:0])
+  AI-type: (destination register [31:28], source register 1 [27:24], Immideate [23:8], OP code [7:0])
+  S-type: (memory address register [31:28], source register 1 [27:24], UNUSED [23:8], OP code [7:0])
+  L-type: (memory address register [31:28], destination register [27:24], UNUSED [23:8], OP code [7:0])
+  J-type: (memory address register [31:28], source register 1 [27:24], source register 2 [23:20], UNUSED [19:8], OP code [7:0])
+  NOP-type: (UNUSED [31:8], OP code [7:0])
+
+Aritmetic Register (AR):
+  AddR: dr = sr1 + sr2
+  SubR: dr = sr1 - sr2
+  AndR: dr = sr1 & sr2
+  OrR: dr = sr1 | sr2
+  NotR: dr = !sr1 //sr2 unused
+
+Aritmetic Immidiate (AI):
+  AddI: dr = sr1 + im
+  SubI: dr = sr1 - im
+  AndI: dr = sr1 & im
+  OrI: dr = sr1 | im
+
+Store (S):
+  Store: mem@(address register) = sr1
+
+Load (L):
+  Load: dr = mem@(address register)
+
+Jump (J):
+  Jump: pc = address register //sr1 and sr2 unused
+  JumpEq: sr1 == sr2 ? pc = address register | pc + 4
+
+No Operation (NOP):
+  Nop: // no operation

@@ -1,0 +1,9 @@
+The flower CPU is a pipelined CPU implementing a custom RISCV inspired ISA, flowerISA.
+
+The pipeline stages consist of
+  Instruction read (IR)
+  Execute (EX)
+  Memory (MEM)
+  Write back (WB)
+
+Specifications on each pipeline stage can be found in the respective directories.

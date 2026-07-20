@@ -1,0 +1,35 @@
+This document contains specifications for the execution stage.
+
+Inputs:
+  inst [31:0]
+  rs1 [31:0]
+  rs2 [31:0]
+
+Outpus:
+  inst [31:0]
+  rs1_pass [31:0]
+  rs2_pass [31:0]
+  res [31:0]
+
+The instruction, rs1 and rs2 is always passed to the next pipeline stage.
+
+Below is a list of what sould be done in each instruction:
+  AddR: res = rs1 + rs2
+  SubR: res = sr1 - sr2
+  AndR: res = sr1 & sr2
+  OrR: res = sr1 | sr2
+  NotR: res = !sr1 //sr2 unused
+
+  AddI: res = sr1 + im
+  SubI: res = sr1 - im
+  AndI: res = sr1 & im
+  OrI: res = sr1 | im
+
+  Store: -
+
+  Load: -
+
+  Jump: -
+  JumpEq: -
+
+  Nop: -
