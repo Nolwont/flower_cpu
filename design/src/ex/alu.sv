@@ -5,7 +5,7 @@ module alu (
     output wire [31:0] out
     );
 
-    assign out = opcode == ADDR?
+    assign out = name == design_pkg::ADDR ?
             in_a + in_b :
             in_a - in_b;
 
