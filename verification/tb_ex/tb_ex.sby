@@ -8,7 +8,7 @@ smtbmc
 read_verilog -sv design_pkg.sv
 read_verilog -sv alu.sv
 read_verilog -sv ex.sv
-read_verilog -formal tb_ex_assertions.sv
+read_verilog -sv -formal tb_ex_assertions.sv
 read_verilog -sv tb_ex.sv
 prep -top tb_ex
 

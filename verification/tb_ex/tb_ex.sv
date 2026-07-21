@@ -1,5 +1,6 @@
 module tb_ex();
 
+    wire clk;
     wire [31:0] inst_ex_in;
     wire [31:0] rs1_ex_in;
     wire [31:0] rs2_ex_in;
@@ -9,7 +10,6 @@ module tb_ex();
     wire [31:0] res_ex_out;
 
     ex u_ex(.*);
-
     tb_ex_assertions u_asrt(.*);
 
 endmodule: tb_ex

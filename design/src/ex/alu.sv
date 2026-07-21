@@ -5,8 +5,15 @@ module alu (
     output wire [31:0] out
     );
 
-    assign out = name == design_pkg::ADDR ?
-            in_a + in_b :
-            in_a - in_b;
+    logic [31:0] result;
+
+    always_comb begin
+        case (opcode)
+            design_pkg::ADDR: result <= in_a + in_b;
+            default: result <= 0;
+        endcase
+    end
+
+    assign out = result;
 
 endmodule: alu
